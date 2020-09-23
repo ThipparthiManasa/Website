@@ -3,16 +3,6 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var occupation= this.props.data.occupation;
-      var description= this.props.data.description;
-      var city= this.props.data.address.city;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-      })
-    }
-
     return (
       <header id="home">
 
@@ -33,11 +23,12 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3>I'm a {city} based manasa  <span>{occupation}</span>. {description}.</h3>
+            <h1 className="responsive-headline">I'm Manasa Thipparthi.</h1>
+            <h3>I'm a Kansas based <span>Software Developer</span>. Software Engineer who is a passionate learner and wants to pursue a career in computer science, work in a challenging environment and contribute to the growth of the organization using my technical creative skills which would help in personal and organizational development.</h3>
             <hr />
             <ul className="social">
-               {networks}
+            <li key="linkedin"><a href="https://www.linkedin.com/in/manasathipparthi/"><i className="fa fa-linkedin"></i></a></li>
+            <li key="github"><a href="https://github.com/ThipparthiManasa"><i className="fa fa-github"></i></a></li>
             </ul>
          </div>
       </div>
